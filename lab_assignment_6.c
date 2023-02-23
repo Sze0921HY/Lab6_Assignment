@@ -2,9 +2,10 @@
 
 int search(int numbers[], int low, int high, int value) 
 {
+	int m = (low + high)/2;
 	if (low > hight)
 		return -1;
-	int m = (low + high)/2;
+	if (value > numbers[m])
 		return search(numbers, mid + 1, high, value);
 	else if (value < numbers[m])
 		return search(numbers, low, m-1, value);
